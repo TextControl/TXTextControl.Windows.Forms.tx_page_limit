@@ -32,32 +32,34 @@ Public Class Form1
     Friend WithEvents TextControl1 As TXTextControl.TextControl
     Friend WithEvents ButtonBar1 As TXTextControl.ButtonBar
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.TextControl1 = New TXTextControl.TextControl
-        Me.ButtonBar1 = New TXTextControl.ButtonBar
+        Me.TextControl1 = New TXTextControl.TextControl()
+        Me.ButtonBar1 = New TXTextControl.ButtonBar()
         Me.SuspendLayout()
         '
         'TextControl1
         '
         Me.TextControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextControl1.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.TextControl1.Location = New System.Drawing.Point(0, 28)
+        Me.TextControl1.FormattingPrinter = "Standard"
+        Me.TextControl1.Location = New System.Drawing.Point(0, 44)
         Me.TextControl1.Name = "TextControl1"
-        Me.TextControl1.Size = New System.Drawing.Size(632, 466)
+        Me.TextControl1.Size = New System.Drawing.Size(632, 450)
         Me.TextControl1.TabIndex = 0
-        Me.TextControl1.ViewMode = TXTextControl.ViewMode.PageView
+        Me.TextControl1.UserNames = Nothing
         '
         'ButtonBar1
         '
+        Me.ButtonBar1.BackColor = System.Drawing.SystemColors.Control
         Me.ButtonBar1.Dock = System.Windows.Forms.DockStyle.Top
         Me.ButtonBar1.Location = New System.Drawing.Point(0, 0)
         Me.ButtonBar1.Name = "ButtonBar1"
-        Me.ButtonBar1.Size = New System.Drawing.Size(632, 28)
+        Me.ButtonBar1.Size = New System.Drawing.Size(632, 44)
         Me.ButtonBar1.TabIndex = 1
         Me.ButtonBar1.Text = "ButtonBar1"
         '
         'Form1
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(8, 19)
         Me.ClientSize = New System.Drawing.Size(632, 494)
         Me.Controls.Add(Me.TextControl1)
         Me.Controls.Add(Me.ButtonBar1)
